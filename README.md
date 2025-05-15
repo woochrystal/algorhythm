@@ -23,6 +23,6 @@
 
 
 ### ⚙개발환경
-`HTML`,`JavaScript`
+`HTML`(내부에 `JavaScript` 태그 사용)
 
 
