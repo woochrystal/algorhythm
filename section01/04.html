@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1부터 N까지 합 출력하기</title>
+    </head>
+    <body>
+        <h2>1부터 N까지 합 출력하기</h2>
+        <script>
+            function solution(n){
+                let answer = 0;
+                for(let i = 1; i <= n; i++){
+                    answer = i + answer;
+                }
+                return answer;
+            }
+
+            console.log(solution(10));//55
+            console.log(solution(6));//21
+        </script>
+    </body>
+</html>
