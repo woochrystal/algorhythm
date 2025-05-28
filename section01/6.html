@@ -7,11 +7,23 @@
         <h2>6. 홀수</h2>
         <script>
             function solution(arr){
-                let answer;   
+                let answer,
+                    num = arr[0],
+                    emp = [];   
+                console.log(arr.sort())
+                // for(let i = 1; i < arr.length; i++){
+                //     let a = i - 1;
+                //     // console.log(i)
+                //     if(num>arr[i]){
+                //         num = arr[i]
+                //     }
+                //     console.log(arr)
+                //     answer=num
+                // }
                 return answer;
             }
             
-            let arr=[12, 77, 38, 41, 53, 92, 85];
+            let arr=[12, 77, 38, 41, 53, 92, 1];
             console.log(solution(arr));
         </script>
     </body>
