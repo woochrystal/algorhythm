@@ -11,6 +11,7 @@
                     num01 = 0,
                     num02 = 0,
                     emp = [];
+                    // 최소값 설정 : Number.MIN_SAFE_INTEGER
                     
                 for(let i in arr){
                     if(arr[i] % 2){
@@ -26,6 +27,18 @@
                     }
                     
                 }
+
+                /*
+                let answer=[];
+                let sum=0, min=1000;
+                for(let x of arr){
+                    if(x%2===1){
+                        sum+=x;
+                        if(x<min) min=x;
+                    }
+                }
+                answer.push(sum);
+                answer.push(min); */
                 
                 return answer;
             }
