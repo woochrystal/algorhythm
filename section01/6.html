@@ -8,22 +8,29 @@
         <script>
             function solution(arr){
                 let answer,
-                    num = arr[0],
-                    emp = [];   
-                console.log(arr.sort())
-                // for(let i = 1; i < arr.length; i++){
-                //     let a = i - 1;
-                //     // console.log(i)
-                //     if(num>arr[i]){
-                //         num = arr[i]
-                //     }
-                //     console.log(arr)
-                //     answer=num
-                // }
+                    num01 = 0,
+                    num02 = 0,
+                    emp = [];
+                    
+                for(let i in arr){
+                    if(arr[i] % 2){
+                        emp.push(arr[i]);
+                        num01+=arr[i];
+                    }
+                }
+                console.log(num01);
+                for(let i = 1; i < emp.length; i++){
+                    if(emp[0] > emp[i]){
+                        emp[0] = emp[i]
+                        answer = emp[0]
+                    }
+                    
+                }
+                
                 return answer;
             }
             
-            let arr=[12, 77, 38, 41, 53, 92, 1];
+            let arr=[12, 77, 38, 41, 53, 92, 85];
             console.log(solution(arr));
         </script>
     </body>
