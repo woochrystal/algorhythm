@@ -7,12 +7,26 @@
         <h2>7. 10부제</h2>
         <script>
             function solution(day, arr){
-                let answer;
+                let answer = 0;
+                let arr_group = []
+                for (const i in arr) {
+                    var arr_num = arr[i] % 10;
+                    if(arr_num == day){
+                        arr_group.push(arr[i]);
+                        answer = arr_group.length;
+                    }
+                }
+               //풀이 - day와 같으면 answer값을 하나씩 올림
+            //    for (const i of arr) {
+            //     if(i%10 == day) answer++;
+            //    }
                 return answer;
             }
             
-            let arr=[25, 23, 11, 47, 53, 17, 33];
-            console.log(solution(3, arr));
+            // let arr=[25, 23, 11, 47, 53, 17, 33];
+            // console.log(solution(3, arr));
+            let arr=[12, 20, 54, 30, 87, 91, 30];
+            console.log(solution(0, arr));
         </script>
     </body>
 </html>
