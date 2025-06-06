@@ -11,13 +11,18 @@
         function solution(arr){
             let answer = [];
             let all = 0;
-            for (const i of arr) {
-                all = all + i;
-                // console.log(all)
+            let minus = 0;
+            for (let i = 0; i < arr.length; i++) {
+                all = all + arr[i];
                 
-                for(let a = 1; a < arr.length; a++){
-                    console.log(a)
+                for(let a = i + 1; a < arr.length; a++){
+                    minus = arr[a] + arr[i];
+                console.log(minus)
+                // console.log(arr[a] + arr[i])
+                // if(all - minus){
+                    // }
                 }
+                // console.log(all)
             }
             return answer;
         }
