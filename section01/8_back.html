@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8. 일곱난쟁이 다시하기</title>
+    <title>8. 일곱난쟁이</title>
 </head>
 <body>
-    <h2>8. 일곱난쟁이 다시하기</h2>
+    <h2>8. 일곱난쟁이</h2>
     <script>
         function solution(arr){
             let answer = arr;
-            let reduce = answer.reduce((a, b) => a+b , 0);
+            let red = answer.reduce((a,b) => a+b, 0);//검색해서 공부해보기
             let check = 0;
-            
             for(let i = 0; i < arr.length; i++){
-                for(let j = i+1; j < 8; j++){
-                    if( reduce - (arr[j] + arr[i]) == 100){
-                        answer.splice(j, 1)
-                        answer.splice(i, 1)
-                        check = 1;
-                        break;
+                for(let j = i + 1; j < arr.length; j++ ){
+                    if((red - (answer[i] + answer[j])) == 100){
+                        answer.splice(j, 1);
+                        answer.splice(i, 1);
+                        check = 1;  
+                        break; 
                     }
                 }
                 if(check == 1){
-                    break;
+                    break
                 }
             }
-            console.log(reduce)
+            
             return answer;
         }
         
