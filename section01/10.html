@@ -7,8 +7,22 @@
         <h2>10. 문자 찾기</h2>
         <script>
             function solution(s, t){
-                let answer;
-                return answer;
+                
+                //내 풀이
+                let answer = 0;
+                for (const i of s) {
+                    // console.log(i)
+                    if(i == t){
+                        answer += 1 //선생님 방식 answer++
+                    }
+                }
+
+                /*
+                //다른방식 강의복습 - split으로 나누고 개수 세기
+               let answer = s.split(t).length;
+               //해당 글자 기준으로 나누고 개수 세기
+               return answer - 1;//그 글자에서 하나 빼면 글자 개수 나옴
+               */
             }
             
             let str="COMPUTERPROGRAMMING";
