@@ -7,7 +7,19 @@
         <h2>9. A를 #으로</h2>
         <script>
             function solution(s){
-                let answer;
+                /*
+                    let answer;
+                    let big = /A/g;
+                    return answer = s.replace(big, "#");
+                */
+                let answer='';
+                for (const i of s) {
+                    if(i =='A'){
+                        answer += '#';
+                    }else{
+                        answer += i;
+                    }
+                }
                 return answer;
             }
             
