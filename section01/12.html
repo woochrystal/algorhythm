@@ -8,7 +8,15 @@
         <script>
             function solution(s){         
                 let answer="";
-
+                for (const i of s) {
+                    if(i.match(/[a-z]/g)){
+                        //소문자만 인식해서 변환시키기
+                        //걍 통채로 변환시키려면 toUpperCase()만 써도될듯
+                        answer+=(i.toUpperCase())
+                    }else{
+                        answer+=i
+                    }
+                }
                 return answer;
 
             }

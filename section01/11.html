@@ -7,8 +7,14 @@
         <h2>11. 대문자 찾기</h2>
         <script>
             function solution(s){         
-                let answer;
-
+                let answer = 0;
+                // s.match(/[A-Z]/)
+                for (const i of s) {
+                    if(i.match(/[A-Z]/g)){
+                        // /A-Z/g 로 써서 계속 결과를 못불러왔다
+                        answer++;
+                    }
+                }
                 return answer;
             }
 
