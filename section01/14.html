@@ -7,7 +7,16 @@
         <h2>14. 가장 긴 문자열</h2>
         <script>
             function solution(s){  
+                //내풀이
                 let answer="";
+                let num = 0;
+                for (const i of s) {
+                    // console.log(i)
+                    if(i.length > num){
+                        num = i.length;
+                        answer = i;
+                    }
+                }
                 return answer;
             }
             let str=["teacher", "time", "student", "beautiful", "good"];
