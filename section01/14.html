@@ -9,9 +9,18 @@
             function solution(s){  
                 //내풀이
                 let answer="";
-                let num = 0;
+                // let num = 0;
+                // for (const i of s) {
+                //     // console.log(i)
+                //     if(i.length > num){
+                //         num = i.length;
+                //         answer = i;
+                //     }
+                // }
+
+                //지웠다가 한번 더해보기
+                let num = 0 ;
                 for (const i of s) {
-                    // console.log(i)
                     if(i.length > num){
                         num = i.length;
                         answer = i;
