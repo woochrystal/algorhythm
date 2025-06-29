@@ -7,14 +7,23 @@
         <h2>13. 대소문자 변환</h2>
         <script>
             function solution(s){  
-                // 내풀이 - 아스키코드 사용
                 let answer = '';
+                /*
+                // 내풀이 - 아스키코드 사용
                 for (const i of s) {
                     let txt = i.charCodeAt()
                     if(txt >= 65 && txt <= 90){//대문자
                         answer+=i.toLowerCase();
                     }else{//소문자
                         answer+=i.toUpperCase();
+                    }
+                }*/
+                // 인강풀이
+                for (let i of s) {
+                    if(i == i.toUpperCase()){//대문자일 경우
+                        answer += i.toLowerCase();
+                    }else{
+                        answer += i.toUpperCase();
                     }
                 }
                 return answer;
