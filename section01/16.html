@@ -9,12 +9,16 @@
             function solution(s){  
                 let answer ='';
                 let num = Number.MIN_SAFE_INTEGER;
+                let check = 0;
                 for (let i in s) {
                     // console.log(s.length)
                     for(let x = i; x < s.length; x++){
-                        console.log(i)
+                        if(s[i] != s[x]){
+                            answer += s[x]
+                        }
+                        // console.log(s[i])
+                        // console.log(s[x])
                     }
-                    // if()
                 }
                 return answer;
             }
