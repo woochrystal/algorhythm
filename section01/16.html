@@ -8,18 +8,12 @@
         <script>
             function solution(s){  
                 let answer ='';
-                let num = Number.MIN_SAFE_INTEGER;
-                let check = 0;
-                for (let i in s) {
-                    // console.log(s.length)
-                    for(let x = i; x < s.length; x++){
-                        if(s[i] != s[x]){
-                            answer += s[x]
-                        }
-                        // console.log(s[i])
-                        // console.log(s[x])
+                for(let i = 0; i < s.length; i++){
+                    if(s.indexOf(s[i]) == i){
+                        answer+=s[i];
                     }
                 }
+                
                 return answer;
             }
             console.log(solution("ksekkset"));
