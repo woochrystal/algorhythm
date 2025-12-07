@@ -6,11 +6,17 @@
     <body>
         <h2>17. 중복단어제거</h2>
         <script>
-            function solution(s){  
-                let answer = '';
-                for (let i=0; i<= s.length;i++) {
-                    console.log(s.indexOf(i))
-                }
+            function solution(s){
+                let answer ;
+                // console.log(s.indexOf('time'));
+                answer = s.filter(//true 인 요소만 리턴
+                    function(v, i){//forOf, forIn
+                        // if(s.indexOf(v) == i){
+                        //     return true;
+                        // }
+                        return s.indexOf(v) == i;
+                    }
+                );
                 
                 
                 return answer;
